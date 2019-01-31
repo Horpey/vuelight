@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Room Light
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!-- CSS Files -->
+  <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./assets/css/custom.css" rel="stylesheet" />
+  <link href="./assets/vuesax/vuesax.css" rel="stylesheet">
+
+  <link href="./assets/css/now-ui-kit.css?v=1.2.0" rel="stylesheet" />
+</head>
+
+<body class="index-page sidebar-collapse">
+
+    <!-- :style="{'background': 'linear-gradient(180deg, #000c, #00000080), url('+ require ('../../assets/images/background.jpg') + ')'}" -->
+<div id="app">
+  <div class="lighnode">
+    <img class="bulb" src="assets/img/bulb.png"/>
+    <div v-if="!toggleMode" class="lightsource"></div>
+    <div v-if="!toggleMode" class="lightsource-spread"></div>
+  </div>
+  <div :class="{darkTheme: toggleMode}" class="theme" :style="{'background': 'linear-gradient(180deg, ' + darkscene +  ', ' + darkscene + '), url(' + 'assets/img/bgnew.png' + ')'}">
+      <div class="container">
+          <h1 class="heading">{{appTitle}}<small>.v1</small></h1>
+          <p>Light Toggle:: {{toggleMode}} Light-Intensity:: {{lightIntensity}} Darkscene:: {{darkscene}}</p>
+          <vs-switch color="dark" v-model="toggleMode"/>
+      </div>
+
+      
+    
+      <div class="slide-card">
+        <div class="row">
+          <div class="col-10">
+              <vs-slider @change="changeOpacity" color="dark" max=100 v-model="lightIntensity"/>
+          </div>
+          <div class="col-2">
+            <img class="light-icon" src="assets/img/light-bulb.svg"/>
+          </div>
+        </div>
+        </div>
+  </div>
+</div>
+ 
+  
+  <!--   Core JS Files   -->
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+  <script src="./assets/vuesax/vuesax.js"></script>
+  <script src="./assets/js/vue-custom.js"></script>
+  <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+</body>
+
+</html>

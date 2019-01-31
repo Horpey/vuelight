@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed');
+
+.theme{
+    background-size: cover!important;
+    background-position: 62% 44%!important;
+    background-repeat: no-repeat!important;
+    height: 100vh!important;
+    transition: 1s all;
+}
+
+.slide-card{
+    background: white;
+    padding: 11px 11px;
+    box-shadow: 0px 7px 12px 0px #00000003;
+    position: absolute;
+    width: 84%;
+    bottom: 5%;
+    left: 8%;
+}
+
+.heading{
+    font-size: 40px;;
+    padding-top: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #060f1a;
+}
+
+.slideme{
+    margin-top: 13px;
+}
+
+.slider.slider-primary .noUi-handle {
+    background-color: #060f1a!important;
+}
+
+.slider.slider-primary.noUi-target {
+    background-color: rgba(6, 15, 26, 0.48)!important;
+}
+
+.slider.slider-primary .noUi-connect{
+    background: #060f1a!important;
+}
+
+/* Dark Theme */
+.darkTheme{
+    background: linear-gradient(rgba(0, 0, 0, 0.815),rgba(0, 0, 0, 0.815)), url(../img/bgnew.png)!important;
+    background-size: cover!important;
+    background-position: 62% 44%!important;
+    background-repeat: no-repeat!important;
+    color: white!important;
+    transition: 1s all;
+}
+
+.darkTheme .heading{
+    transition: 1s all;
+    color: white!important;
+}
+
+.lightsource-spread{
+    background: #ffff1c;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    right: 5%;
+    top: 31%;
+    border-radius: 400px;
+    filter: blur(70px) grayscale(60%);
+}
+
+.con-vs-slider{
+    min-width: 100%!important;
+}
+
+.lightsource{
+    background: #fffefa;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    right: 23%;
+    top: 38%;
+    border-radius: 400px;
+    filter: blur(13px) grayscale(60%);
+    transition: 2s all;
+}
+
+.bulb{
+    position: absolute;
+    width: 77px;
+    right: 23%;
+    z-index: 99;
+    top: 37%;
+    transition: 2s all;
+}
